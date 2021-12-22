@@ -19,3 +19,9 @@ function getData() {firebase.database().ref("/").on('value', function(snapshot) 
       //End code
       });});}
 getData();
+function addroom(){
+      username = document.getElementById("roomname").value;
+      firebase.database().ref("/").child(username).update({
+            purpose : "adding user"
+      });
+}
