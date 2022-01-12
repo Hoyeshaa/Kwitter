@@ -28,10 +28,15 @@ function addroom(){
             purpose : "adding user"
       });
       localStorage.setItem("roomname",roomname);
-      window.location = "kwitterpage.html";
+      window.location = "kwitter_page.html";
 }
 function redirecttoroomname(room){
       console.log(room);
       localStorage.setItem("roomname",room);
-      window.location = "kwitterpage.html";
+      window.location = "kwitter_page.html";
+}
+function logout(){
+      localStorage.removeItem("roomname");
+      localStorage.removeItem("username");
+      window.location = "index.html";
 }
